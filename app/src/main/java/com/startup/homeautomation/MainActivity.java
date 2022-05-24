@@ -62,33 +62,21 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        aSwitch1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                requestQueue = Volley.newRequestQueue(MainActivity.this);
-                ON_OFF(1, 1, aSwitch1.isChecked() ? "ON" : "OFF");
-            }
+        aSwitch1.setOnClickListener(v -> {
+            requestQueue = Volley.newRequestQueue(MainActivity.this);
+            ON_OFF(1, 1, aSwitch1.isChecked() ? "ON" : "OFF");
         });
-        aSwitch2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                requestQueue = Volley.newRequestQueue(MainActivity.this);
-                ON_OFF(1, 2, aSwitch2.isChecked() ? "ON" : "OFF");
-            }
+        aSwitch2.setOnClickListener(v -> {
+            requestQueue = Volley.newRequestQueue(MainActivity.this);
+            ON_OFF(1, 2, aSwitch2.isChecked() ? "ON" : "OFF");
         });
-        aSwitch3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                requestQueue = Volley.newRequestQueue(MainActivity.this);
-                ON_OFF(1, 3, aSwitch3.isChecked() ? "ON" : "OFF");
-            }
+        aSwitch3.setOnClickListener(v -> {
+            requestQueue = Volley.newRequestQueue(MainActivity.this);
+            ON_OFF(1, 3, aSwitch3.isChecked() ? "ON" : "OFF");
         });
-        aSwitch4.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                requestQueue = Volley.newRequestQueue(MainActivity.this);
-                ON_OFF(1, 4, aSwitch4.isChecked() ? "ON" : "OFF");
-            }
+        aSwitch4.setOnClickListener(v -> {
+            requestQueue = Volley.newRequestQueue(MainActivity.this);
+            ON_OFF(1, 4, aSwitch4.isChecked() ? "ON" : "OFF");
         });
     }
 
@@ -119,7 +107,6 @@ public class MainActivity extends AppCompatActivity {
     private void jsonParse() {
 
         String url = "https://homeautomationapi-sutharsolutions2.azurewebsites.net/status/all/5cd7a9bb-611b-424d-bde2-e440f8a92044/1/"; // + token.getText().toString() + "/1";
-//                String url = "https://192.168.1.100/status/all/17ba5242-e6af-4bc0-82ab-413dc42366f2/1/"; // + token.getText().toString() + "/1";
 
         // Request a string response from the provided URL.
         JsonObjectRequest stringRequest = new JsonObjectRequest(Request.Method.GET, url, null,
